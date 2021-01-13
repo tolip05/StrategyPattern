@@ -1,8 +1,9 @@
-package com.company;
+package com.company.strategies;
 
+import com.company.strategies.Strategy;
 import com.company.weapons.Weapon;
 
-public class Player {
+public class Player implements Strategy {
     private Weapon weapon;
     private String name;
 
@@ -11,7 +12,8 @@ public class Player {
         this.name = name;
     }
 
-    public void action(){
+    @Override
+    public void fight() {
         this.weapon.attack();
     }
 }
